@@ -20,7 +20,7 @@ function App() {
   }
   const searchWeather = () => {
     axios
-    .get(`http://api.weatherapi.com/v1/current.json?key=6736147cebe740b486493829211611&q=${input}&aqi=no`)
+    .get(`http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API}&q=${input}&aqi=no`)
     .then(response => {
       setWeather(response.data)
     })
